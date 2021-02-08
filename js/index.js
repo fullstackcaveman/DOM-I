@@ -77,8 +77,10 @@ navLink5.textContent = siteContent['nav']['nav-item-5'];
 const navLink6 = navLinks[5];
 navLink6.textContent = siteContent['nav']['nav-item-6'];
 
-// const greenLinks = document.querySelectorAll('a');
-// greenLinks.style.color = 'green';
+const greenLinks = document.querySelectorAll('nav a');
+greenLinks.forEach((link) => {
+	link.style.color = 'green';
+});
 
 // CTA Section
 // Text
@@ -95,8 +97,6 @@ const word3 = newArray[2];
 cta.innerHTML = `${word1}` + '<br>' + `${word2}` + '<br>' + `${word3}`;
 
 console.log(cta);
-
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 // Button
 const ctaButton = document.querySelector('.cta-text button');
