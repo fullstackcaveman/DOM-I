@@ -66,3 +66,39 @@ navLink5.textContent = siteContent['nav']['nav-item-5'];
 
 const navLink6 = navLinks[5];
 navLink6.textContent = siteContent['nav']['nav-item-6'];
+
+// CTA Section
+// Text
+const cta = document.querySelector('.cta-text h1');
+cta.textContent = siteContent['cta']['h1'];
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+// Button
+const ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = siteContent['cta']['button'];
+
+// Image
+const ctaImage = document.querySelector('#cta-img');
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+
+// Main Content Section
+// Top Content
+const leftContentH4 = document.querySelector(
+	'.top-content > div:nth-child(1) > h4'
+);
+leftContentH4.textContent = siteContent['main-content']['features-h4'];
+
+const leftContentP = document.querySelector(
+	'.top-content > div:nth-child(1) > p'
+);
+leftContentP.textContent = siteContent['main-content']['features-content'];
+
+const rightContentH4 = document.querySelector(
+	'.top-content > div:nth-child(2) > h4'
+);
+rightContentH4.textContent = siteContent['main-content']['about-h4'];
+
+const rightContentP = document.querySelector(
+	'.top-content > div:nth-child(2) > p'
+);
+rightContentP.textContent = siteContent['main-content']['about-content'];
