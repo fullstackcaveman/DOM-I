@@ -137,3 +137,17 @@ const bottomRightP = document.querySelector(
 	'.bottom-content > div:nth-child(3) > p'
 );
 bottomRightP.textContent = siteContent['main-content']['vision-content'];
+
+// Contact Section
+const contact = document.querySelector('.contact > h4');
+contact.textContent = siteContent['contact']['contact-h4'];
+
+const address = document.querySelector('.contact > p:nth-child(2)');
+address.textContent = siteContent['contact']['address'];
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+const phone = document.querySelector('.contact > p:nth-child(3)');
+phone.textContent = siteContent['contact']['phone'];
+
+const email = document.querySelector('.contact > p:nth-child(4)');
+email.textContent = siteContent['contact']['email'];
