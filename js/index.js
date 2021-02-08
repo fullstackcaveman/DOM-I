@@ -151,3 +151,7 @@ phone.textContent = siteContent['contact']['phone'];
 
 const email = document.querySelector('.contact > p:nth-child(4)');
 email.textContent = siteContent['contact']['email'];
+
+// Footer
+const footer = document.querySelector('footer > p');
+footer.textContent = siteContent['footer']['copyright'];
