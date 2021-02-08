@@ -49,6 +49,16 @@ logo.setAttribute('src', siteContent['nav']['img-src']);
 // Nav Links
 const navLinks = document.querySelectorAll('nav a');
 
+const firstLink = document.createElement('a');
+firstLink.textContent = 'Home';
+firstLink.href = '#';
+document.querySelector('nav').prepend(firstLink);
+
+const lastLink = document.createElement('a');
+lastLink.textContent = 'Shop';
+lastLink.href = '#';
+document.querySelector('nav').appendChild(lastLink);
+
 const navLink1 = navLinks[0];
 navLink1.textContent = siteContent['nav']['nav-item-1'];
 
@@ -67,7 +77,7 @@ navLink5.textContent = siteContent['nav']['nav-item-5'];
 const navLink6 = navLinks[5];
 navLink6.textContent = siteContent['nav']['nav-item-6'];
 
-// const greenLinks = document.querySelectorAll('nav');
+// const greenLinks = document.querySelectorAll('a');
 // greenLinks.style.color = 'green';
 
 // CTA Section
@@ -168,8 +178,6 @@ const address2 = `${newAddressArray[4]} ${newAddressArray[5]}`;
 address.innerHTML = `${address1}` + '<br>' + `${address2}`;
 
 console.log(address);
-
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 const phone = document.querySelector('.contact > p:nth-child(3)');
 phone.textContent = siteContent['contact']['phone'];
