@@ -102,3 +102,38 @@ const rightContentP = document.querySelector(
 	'.top-content > div:nth-child(2) > p'
 );
 rightContentP.textContent = siteContent['main-content']['about-content'];
+
+// Middle Image
+const middleImage = document.querySelector('#middle-img');
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// Bottom Content
+const bottomLeftH4 = document.querySelector(
+	'.bottom-content > div:nth-child(1) > h4'
+);
+bottomLeftH4.textContent = siteContent['main-content']['services-h4'];
+
+const bottomLeftP = document.querySelector(
+	'.bottom-content > div:nth-child(1) > p'
+);
+bottomLeftP.textContent = siteContent['main-content']['services-content'];
+
+const bottomMiddleH4 = document.querySelector(
+	'.bottom-content > div:nth-child(2) > h4'
+);
+bottomMiddleH4.textContent = siteContent['main-content']['product-h4'];
+
+const bottomMiddleP = document.querySelector(
+	'.bottom-content > div:nth-child(2) > p'
+);
+bottomMiddleP.textContent = siteContent['main-content']['product-content'];
+
+const bottomRightH4 = document.querySelector(
+	'.bottom-content > div:nth-child(3) > h4'
+);
+bottomRightH4.textContent = siteContent['main-content']['vision-h4'];
+
+const bottomRightP = document.querySelector(
+	'.bottom-content > div:nth-child(3) > p'
+);
+bottomRightP.textContent = siteContent['main-content']['vision-content'];
