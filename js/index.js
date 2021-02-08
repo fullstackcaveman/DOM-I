@@ -67,10 +67,25 @@ navLink5.textContent = siteContent['nav']['nav-item-5'];
 const navLink6 = navLinks[5];
 navLink6.textContent = siteContent['nav']['nav-item-6'];
 
+// const greenLinks = document.querySelectorAll('nav');
+// greenLinks.style.color = 'green';
+
 // CTA Section
 // Text
 const cta = document.querySelector('.cta-text h1');
-cta.textContent = siteContent['cta']['h1'];
+
+ctaText = siteContent['cta']['h1'];
+
+const newArray = ctaText.split(' ');
+
+const word1 = newArray[0];
+const word2 = newArray[1];
+const word3 = newArray[2];
+
+cta.innerHTML = `${word1}` + '<br>' + `${word2}` + '<br>' + `${word3}`;
+
+console.log(cta);
+
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 // Button
@@ -144,6 +159,16 @@ contact.textContent = siteContent['contact']['contact-h4'];
 
 const address = document.querySelector('.contact > p:nth-child(2)');
 address.textContent = siteContent['contact']['address'];
+
+const newAddressArray = address.textContent.split(' ');
+
+const address1 = `${newAddressArray[0]} ${newAddressArray[1]} ${newAddressArray[2]} ${newAddressArray[3]}`;
+const address2 = `${newAddressArray[4]} ${newAddressArray[5]}`;
+
+address.innerHTML = `${address1}` + '<br>' + `${address2}`;
+
+console.log(address);
+
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 const phone = document.querySelector('.contact > p:nth-child(3)');
