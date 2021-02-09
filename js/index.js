@@ -179,13 +179,22 @@ address.innerHTML = `${address1}` + '<br>' + `${address2}`;
 
 console.log(address);
 
+// Phone Link
 const phone = document.querySelector('.contact > p:nth-child(3)');
-phone.textContent = siteContent['contact']['phone'];
+const phoneLink = document.createElement('a');
+phoneLink.textContent = siteContent['contact']['phone'];
+phoneLink.href = 'tel:' + siteContent['contact']['phone'];
+phoneLink.style.textDecoration = 'none';
+phoneLink.style.color = 'black';
+phone.appendChild(phoneLink);
 
+// Email Link
 const email = document.querySelector('.contact > p:nth-child(4)');
 const emailLink = document.createElement('a');
 emailLink.textContent = siteContent['contact']['email'];
 emailLink.href = 'mailto:' + siteContent['contact']['email'];
+emailLink.style.textDecoration = 'none';
+emailLink.style.color = 'black';
 email.appendChild(emailLink);
 
 // email.textContent = siteContent['contact']['email'];
