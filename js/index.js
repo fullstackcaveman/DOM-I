@@ -183,7 +183,12 @@ const phone = document.querySelector('.contact > p:nth-child(3)');
 phone.textContent = siteContent['contact']['phone'];
 
 const email = document.querySelector('.contact > p:nth-child(4)');
-email.textContent = siteContent['contact']['email'];
+const emailLink = document.createElement('a');
+emailLink.textContent = siteContent['contact']['email'];
+emailLink.href = 'mailto:' + siteContent['contact']['email'];
+email.appendChild(emailLink);
+
+// email.textContent = siteContent['contact']['email'];
 
 // Footer
 const footer = document.querySelector('footer > p');
