@@ -188,6 +188,14 @@ phoneLink.style.textDecoration = 'none';
 phoneLink.style.color = 'black';
 phone.appendChild(phoneLink);
 
+phone.addEventListener('mouseover', function () {
+	phone.style.textDecoration = 'underline';
+});
+
+phone.addEventListener('mouseleave', function () {
+	phone.style.textDecoration = 'none';
+});
+
 // Email Link
 const email = document.querySelector('.contact > p:nth-child(4)');
 const emailLink = document.createElement('a');
@@ -197,7 +205,13 @@ emailLink.style.textDecoration = 'none';
 emailLink.style.color = 'black';
 email.appendChild(emailLink);
 
-// email.textContent = siteContent['contact']['email'];
+email.addEventListener('mouseover', function () {
+	email.style.textDecoration = 'underline';
+});
+
+email.addEventListener('mouseleave', function () {
+	email.style.textDecoration = 'none';
+});
 
 // Footer
 const footer = document.querySelector('footer > p');
