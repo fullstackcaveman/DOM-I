@@ -54,11 +54,6 @@ firstLink.textContent = 'Home';
 firstLink.href = '#';
 document.querySelector('nav').prepend(firstLink);
 
-const lastLink = document.createElement('a');
-lastLink.textContent = 'Shop';
-lastLink.href = '#';
-document.querySelector('nav').appendChild(lastLink);
-
 const navLink1 = navLinks[0];
 navLink1.textContent = siteContent['nav']['nav-item-1'];
 
@@ -76,6 +71,11 @@ navLink5.textContent = siteContent['nav']['nav-item-5'];
 
 const navLink6 = navLinks[5];
 navLink6.textContent = siteContent['nav']['nav-item-6'];
+
+const lastLink = document.createElement('a');
+lastLink.textContent = 'Shop';
+lastLink.href = '#';
+document.querySelector('nav').appendChild(lastLink);
 
 const greenLinks = document.querySelectorAll('nav a');
 greenLinks.forEach((link) => {
@@ -95,8 +95,6 @@ const word2 = newArray[1];
 const word3 = newArray[2];
 
 cta.innerHTML = `${word1}` + '<br>' + `${word2}` + '<br>' + `${word3}`;
-
-console.log(cta);
 
 // Button
 const ctaButton = document.querySelector('.cta-text button');
@@ -164,7 +162,7 @@ const bottomRightP = document.querySelector(
 bottomRightP.textContent = siteContent['main-content']['vision-content'];
 
 // Contact Section
-const contact = document.querySelector('.contact > h4');
+const contact = document.querySelector('.contact h4');
 contact.textContent = siteContent['contact']['contact-h4'];
 
 const address = document.querySelector('.contact > p:nth-child(2)');
@@ -177,10 +175,8 @@ const address2 = `${newAddressArray[4]} ${newAddressArray[5]}`;
 
 address.innerHTML = `${address1}` + '<br>' + `${address2}`;
 
-console.log(address);
-
 // Phone Link
-const phone = document.querySelector('.contact > p:nth-child(3)');
+const phone = document.querySelector('.contact p:nth-child(3)');
 const phoneLink = document.createElement('a');
 phoneLink.textContent = siteContent['contact']['phone'];
 phoneLink.href = 'tel:' + siteContent['contact']['phone'];
@@ -188,16 +184,18 @@ phoneLink.style.textDecoration = 'none';
 phoneLink.style.color = 'black';
 phone.appendChild(phoneLink);
 
+// Adds underline on mouseover
 phone.addEventListener('mouseover', function () {
 	phone.style.textDecoration = 'underline';
 });
 
+// Removes underline on mouseleave
 phone.addEventListener('mouseleave', function () {
 	phone.style.textDecoration = 'none';
 });
 
 // Email Link
-const email = document.querySelector('.contact > p:nth-child(4)');
+const email = document.querySelector('.contact p:nth-child(4)');
 const emailLink = document.createElement('a');
 emailLink.textContent = siteContent['contact']['email'];
 emailLink.href = 'mailto:' + siteContent['contact']['email'];
@@ -205,14 +203,16 @@ emailLink.style.textDecoration = 'none';
 emailLink.style.color = 'black';
 email.appendChild(emailLink);
 
+// Adds underline on mouseover
 email.addEventListener('mouseover', function () {
 	email.style.textDecoration = 'underline';
 });
 
+// Removes underline on mouseleave
 email.addEventListener('mouseleave', function () {
 	email.style.textDecoration = 'none';
 });
 
 // Footer
-const footer = document.querySelector('footer > p');
+const footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
